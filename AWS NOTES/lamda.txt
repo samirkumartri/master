@@ -1,0 +1,84 @@
+========================
+Serverless Computing
+========================
+
+-> Serverless computing means run the application without thinking about servers
+
+-> AWS will take care of servers required to run our application
+
+-> AWS lambdas are used to implement serverless computing
+
+=============
+AWS Lambdas
+=============
+AWS Lambda is a way to run code without creating, managing, or paying for servers. 
+
+You supply AWS with the code required to run your function, and you pay for the time AWS runs it, and nothing more.
+
+Your code can access any other AWS service, or it can run on its own. While some rules about how long a function has to respond to a request, thereâ€™s almost no limit to what your Lambda can do.
+
+The real power, though, comes from the scalability that Lambda offers you. 
+
+AWS will scale your code for you, depending on the number of requests it receives. Not having to build and pay for servers is nice. Not having to build and pay for them when your application suddenly goes viral can mean the difference between survival and virtual death.
+
+=====================
+Should I Use It?
+=====================
+While AWS Lambda and serverless architecture have some really cool benefits, there are caveats. State management in a serverless architecture requires a bit of a mindset shift. Thereâ€™s no local state, and traditional database connections are not really applicable to short-lived functions.
+
+Because Lambdas are not persistent, you cannot use connection pooling from the Lambda. If you try to use traditional database connections and AWS spins up 20 lambdas to service 20 requests that come in during a short window, youâ€™re likely to run into data access issues.
+
+Amazon wants to help you solve this data access problem by providing additional services such as DynamoDB or Aurora. This is great to help you solve the connection pooling issue. However, one price youâ€™ll pay for this is vendor lock-in. The more you rely on AWS to manage your infrastructure, the harder itâ€™s going to be to decide to move away from that later. That might be fine for your situation, but itâ€™s good to keep in mind.
+
+
+Lambdas have a hard limit on execution time. After 15 minutes, your function will be stopped whether itâ€™s finished or not. If this is a problem, then AWS Lambdas and functions-as-a-service arenâ€™t a good fit for your application.
+
+This limit comes with a few others: AWS doesnâ€™t allow more than 512MB of disk space for your functions and the invocation payload (request and response) is limited to 256 KB (asynchronous) and 6 MB (synchronous). Here again, these limits have to do with what AWS Lambdas are intended for; small discrete computing jobs.
+
+Another potential issue is the cold start.
+
+Lambdas can be really cheap because you only pay for what you use, but that means that when the lambda is finally triggered, there will be some overhead to turn it on and service the event. Itâ€™s not a significant amount of time, on the order of seconds. Your lambdas will persist for a period of time after the initial cold start, so the cost is not felt on every request.
+
+=======================================
+AWS Lambda vs. AWS EC2 vs. Elastic Beanstalk
+========================================
+
+AWS Lambda is not the only computing service that AWS provides. So how is it different from other services like EC2 and Beanstalk?
+
+Lambda is a Platform as a Service(PaaS) whereas EC2 is an Infrastructure as service(IaaS). EC2 is more flexible and customizable when compared to Lambda. If youâ€™re using EC2, you can choose Operating Systems, Networks, and also customize them. You can also change network configurations between different EC2 instances or between an instance or a VPC and the internet. But using EC2 is like setting up a server and lambda leans more towards serverless architecture. 
+
+Beanstalk is a Platform as a Service(PaaS) to deploy and manage applications on the cloud. Beanstalk provides default provisioning, load balancing, and other features and you just need to enable them to use them for your application. So, most of the things are taken care of by AWS and you focus on building, testing, and deploying the application. The main difference between Beanstalk and Lambda is that with Beanstalk, you put the whole application on the cloud, but when using Lambda, only the functional part of the code goes on the cloud. 
+
+
+The bottom line is that all these computing services have their own pros and cons, and are specialized for different purposes. Which suits you best depends on your use case. Among the 3, AWS Lambda is the most suitable and cheap to run back-end codes without the need to set up a server. 
+
+So it looks like there are some things to consider regarding data and state management, vendor lock-in, and performance. That being said, you shouldnâ€™t be scared of using lambdas, just be aware of what youâ€™re buying. Now, letâ€™s move on to making your first AWS Lambda! 
+
+
+
+==================================
+Running Java Code with AWS Lambda
+==================================
+
+1) Create Lambda Function with 'java 11' runtime
+
+2) Upload jar file in 'Code Source'
+
+3) Configure Handle in Runtime
+
+Class Name : in.ashokit.LambdaHandler
+
+Method Name : handleRequest
+
+Handler Syntax : className :: methodName
+
+Ex: in.ashokit.LambdaHandler::handleRequest
+
+
+
+
+
+
+
+
+

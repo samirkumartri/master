@@ -1,0 +1,247 @@
++++++++++++++
+AWS Cloud
+++++++++++++++
+
+Pre-Requisites : Linux Basics
+
+Duration : 40 Days
+
+Start Date: 18-Aug-2022
+
+Timings:  9:30 AM - 11:00 AM (IST)   ---> Mon - Sat (Regular classes)
+
+++++++++++++++
+Course Content
+++++++++++++++
+
+1) What is Cloud Computing
+2) Cloud Advantages
+3) AWS Services Introduction
+4) Regions & AZ's
+5) Data Centers
+6) EC2 (Elastic Compute Cloud)
+7) EBS (Elastic Block Store)
+8) ELB (Elastic Load Balancer)
+9) ASG (Auto Scaling Group)
+10) S3 (Simple Storage Service)
+11) Route 53 (DNS Mapping)
+12) RDS (Relational Database )
+13) Dynamo DB (No SQL)
+14) Elastic Beanstalk (PaaS)
+15) VPC (Virtual Private Cloud)
+16) Lambdas (Serverless Computing)
+17) Cloud Watch (Monitoring)
+18) SNS (Simple Notification Service)
+19) SES (Simple Email Service)
+20) SQS (Simple Queue Service)
+21) ECS (Elastic Container Service)
+22) EKS (Elastic Kubernetes Service)
+23) Cloud Formation (IaaC)
+24) IAM (Identity & Access Management)
+25) EFS (Elastic File System)
+
+
++++++++++++++++++++++++++++
+Advantages with Ashok IT
+++++++++++++++++++++++++
+Daily Class Notes will be provided
+Daily Class Video will be provided
+Resume Preparation
+Frequenly Asked Interview Questions
+Telegram Group for Doubts Clarifications
+
+
+Note: After completion of AWS you can keep 3 years experience on AWS to attend interviews
+
+Note: After AWS got completed we will start DevOps
+
+
+Package Course  Fee : 15,000 INR  (AWS + DevOps)
+
+AWS Fee : 10, 000 INR 
+
+
+Master Prorgrams on DevOps with AWS
+
+
+1) Linux
+
+2) AWS  (9:30 AM)
+
+3) DevOps ( 8:15 AM / upcoming )
+
+
+******************  Download  Syllabus : https://ashokitech.com/devops-with-aws-online-training ***************
+
+
+############################
+What is Cloud Computing ?
+############################
+
+-> Providing IT Resources on demand basis over the internet
+
+(or)
+
+-> Delivering IT Resources over the internet based on demand
+
+-> Cloud Providers giving infrastructure based on 'Pay As You Go'
+
+############################
+Cloud Computing Advantages
+#############################
+
+1) Pay As You Go Pricing
+
+2) Low Cost
+
+3) Scalability (Scale Up & Scale Down)
+
+4) Availability ( 24 / 7 )
+
+5) Realiability
+
+6) Security
+
+7) Unlimited Storage
+
+8) Backup
+
+
+
+Note: If we setup infrastructure on our own then it is called as on-premises / in-house infrastructure
+-> in-house infrastructure is costly
+-> Managing in-house infrastructure in very very difficult
+
+###################
+Cloud Providers
+####################
+
+-> We have several cloud providers in the market
+
+1) Amazon  (AWS Cloud)
+
+2) Microsoft (Azure Cloud)
+
+3) Google (GCP)
+
+4) Salesforce (Salesforce CRM)
+
+5) IBM (IBM Cloud)
+
+6) Oracle (Oracle Cloud)
+
+7) Alibaba Cloud
+
+8) VM Ware Cloud etc..
+
+
+
+##############
+Cloud Services
+##############
+
+1) IaaS
+
+2) PaaS
+
+3) SaaS
+
+
+-> Infrastructure as a service    
+
+	 (Using Cloud Infrastructure we should prepare platform to run our application )
+
+-> Platform as a service
+
+	(Cloud Provider will give platform to run our application)
+
+-> Software as a service
+	
+	(Cloud Provider will give a software to use for our business)
+
+
+
+Note:  AWS is more famous for IAAS in the market
+
+
+-> AWS providing IT resources for 190+ countries
+
+##########################
+AWS Global Infrastructure
+##########################
+
+
+-> AWS maintaing infrastructure using Regions & Availability Zone
+
+
+1) Regions  (Geographical Location)
+
+2) Availability Zones  (Data Centers)
+
+
+-> 26 Regions & 84 Availability Zones 
+
+
+Note: In one region, multiple Availability Zones will be available
+
+
+In India, AWS having one Region i.e Mumbai ( ap - south - 1)
+
+-> In Mumbai region, AWS having 3 AZs
+
+ap-south-1a
+ap-south-1b
+ap-south-1c
+
+
+Note: Each AZ will have minimum 100kms distance
+
+
+
+######################
+AWS Free Tier Account
+######################
+
+-> We can free account in AWS  
+
+-> Under Free tier we can use AWS service for 1 Year
+
+Note: If bill got generated for usage, AWS will not perform Auto Deduction.
+
+-> As a student, we can request AWS to waveoff our bill amount
+
+
+Note: If bill got generated and if you don't pay that bill amount aws will send multiple reminder to pay bill.... if you don't pay AWS will terminate your account.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+#########
+Scaling
+#########
+
+-> Scalability is one of the major advantage in the Cloud
+
+-> Scalability means we can increase / decrease our Resources based on demand
+
+-> Scaling can be done in 2 ways
+
+1) Verticle Scaling
+
+2) Horizontal Scaling
+
+
+-> Increasing capacity of existing system is called as Verticle Scaling
+
+			8 GB RAM ----> 32 GB RAM -----> 64 GB ------> 128 GB ------> 512 GB
+
+			1 vCPU	  -----> 4 vCPU
+
+			256 SSD    ----> 512 SSD
+
+Note: Upto certain limit only we can do verticle scaling
+
+
+-> Increasing no.of systems/servers is called as Horizontal Scaling
+
+			3 servers ----> 6 servers ---> 10 servers
+
+
+
+Note:  Adding & Removing servers manually is difficult and time taking process.
+
+-> We can't guess how much traffic we will get for our application.
+
+
+############
+Auto Scaling
+#############
+
+-> It is a process of increasing / decreasing no.of servers based on traffic
+
+
+If More Request are coming ---> servers will be added
+
+If less requests are coming ---> servers will be removed
+
+
+Note: Auto Scaling will predict the traffic coming to our application
+
+
+******* AWS Auto Scaling monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost. ******
+
+
+#######################
+Benefits of Auto Scaling
+########################
+
+1) Fault tolerance : Detect when an instance is unhealthy, terminate it, and launch an instance to replace it.
+
+2) Availability : Ensure that your application always has the right amount of capacity to handle the current traffic demand.
+
+3) Cost Management : Save money by dynamically launching instances when they are needed and terminating them when they aren't.
+
+
+############################
+Working with AutoScaling
+############################
+
+1) Create Launch Template
+
+2) Create AutoScaling Group with Launch Template
+
+3) Check EC2 instances Running
+
+4) Terminate the ec2 instance created by AutoScaling
+
+5) After sometime veriy EC2 instances running, terminated instance will be replaced with new instance
+
+
+###########
+Conclustion
+###########
+
+1) Delete Launch Template
+
+2) Delete Auto Scaling Group
+
+3) Delete Running EC2 instances
+
+
+
+
+
+
+
+
+
+
+
+
