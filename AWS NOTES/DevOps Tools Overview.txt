@@ -1,0 +1,66 @@
+========
+DevOps
+========
+
+-> DevOps is  a  process to automate build & deployment of our application
+
+-> DevOps process is used to simplify application delivery process
+
+-> DevOps culture will help us to speed up application delivery process
+
+-> DevOps nothing but set of best practises
+
+			DevOps = Development + Operations
+
+-> DevOps is used to colloborate Development team activites & Operations Team activities
+
+-> As part of DevOps process we will use set of tools those are called as 'DevOps Tools' or 'DevOps Tool Chain'
+
+
+
+1) Build Tools   -> Maven & Gradle   => Code Compilation & Packaging
+
+2) Version Control Tools  -> Git Hub & BitBucket  => To store project source code & monitor changes
+
+3) Code Review Tools -> SonarQube => For Code Quality Checking & identify dev team mistakes in the code
+
+4) Artifact Repo Tools -> Nexus / JFrog => For storing project artifacts (jars & wars) & shared libs
+
+5) WebServers -> Tomcat / JBoss => To run our applications (we need to deploy war file in server)
+
+6) CI CD Tools -> Jenkins / Bamboos / UDeploy => To automate  build & deployment process
+
+7) Infrastructure Tools -> Terraform (IAAC ) => To create infrastructure in cloud
+
+8) Configuration Tools -> Ansible (IAAC) => To manage configurations in our machines
+
+9) Containerization  -> Docker  => To package, build & run our application in any machine
+
+10) Orchestration -> Kubernetes / Openshift  => To manage docker containers
+
+11) App Monitoring Tools -> Grafana / Promethues => Alerting & Monitoring Tools for our applications
+
+12) Log Monitoring Tools  -> ELK Stack / Splunk  => To monitor application logs
+
+					E - Elastic Search
+					L - Logstash
+					K - Kibana
+
+13) Project Management Tool -> JIRA => Project work & Team work will be managed using this jira
+
+14) Ticketing Tool  -> Service Now -> To create tickets for request access / permissions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

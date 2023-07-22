@@ -1,0 +1,222 @@
+###########################
+How to host / deploy a website
+##########################
+
+-> Collection of web pages is called as website
+
+	Ex: gmail.com, amazon.com, facebook.com, ashokit.in, naukri.com etc...
+
+
+-> Websites are 2 types
+
+		1) static website  (same response for every user)
+
+		2) dynamic website (response will change from user to user)
+
+
+-> To host / deploy static websites we will use below web servers (web packages)
+
+			Ex: httpd, apache 2
+
+
+-> To host / deploy dynamic websites we will use below Servers
+
+			Ex: Apache Tomcat, JBOSS, Glashfish, Weblogic, WebSphere, IIS etc...
+
+
+
+############################
+Hosting static website in AWS
+###########################
+
+-> Launch EC2 instance using amazon linux ami
+
+Note: Make sure security group inbound rule having HTTP : 80 protocol
+
+-> Connect to EC2 instance using MobaXterm
+
+-> Execute below commands to host static website
+
+
+$ sudo su
+$ yum install httpd
+$ service httpd start
+
+Note: Access EC2 instance public-ip in browser (test page will be displayed)
+
+$ cd /var/www/html
+$ vi index.html   
+
+<html>
+        <h1> Welcome to Ashok IT</h1>
+        <h2>Learn Here... Lead Anywhere..</h2>
+        <h3>Contact Us : +91 - 99 85 39 66 77</h3>
+</html>
+
+Note: Add webpage content in index.html then save and close the file
+Note: Access EC2 instance public-ip in browser  (web page should display with our content)
+
+
+Ex: http://13.233.148.49/   (or)   http://13.233.148.49:80/
+
+
+
+##############
+Load Balancing
+##############
+
+-> Mulitple users will access web application at a time
+
+-> If we run our application on single server then burden / load will increase on the server
+
+-> When burden increased on server then we will face below issues
+
+			1) Request Processing May Take More Time
+
+			2) Responses will be delayed for the customers
+
+			3) Customers will have bad experience
+
+			4) Server Might Crash
+
+			5) Customers will loose trust on our website
+
+			6) Brand value will be effected
+
+
+-> To overcome all these problems we will use 'Load Balancer"
+
+-> The process of deploying our application/website in multiple servers is called as Load Balancing
+
+-> Load Balancing is used to reduce burden on the server
+
+-> Load Balancer will distribute the traffic to Multiple Servers (Round Robbin Method)
+
+
+####################
+Load Balancer Setup
+####################
+
+1) Create EC2 instance-1 with below user-data
+
+#! /bin/bash
+sudo su
+yum install httpd -y
+cd /var/www/html
+echo "<html><h1>Welcome To Ashok IT : Server - 1 </h1> </html>" > index.html
+service httpd start
+
+
+2) Create EC2 instance-2 with below user-data
+
+#! /bin/bash
+sudo su
+yum install httpd -y
+cd /var/www/html
+echo "<html><h1>Welcome To Ashok IT : Server - 2 </h1> </html>" > index.html
+service httpd start
+
+
+3) Create Target Group and add  above 2 webservers to the target group
+
+
+4) Create Load Balancer ( ALB ) and attach target group
+
+
+Note: Once LBR got created then access LBR using DNS
+
+
+
+
+Note: After practise delete Load Balancer and EC2 instances
+
+
+##############################
+Microservices App Load Balancer
+################################
+
+
+1) Create EC2 instance (Flights-Server1) with below user data
+
+#! /bin/bash
+sudo su
+yum install httpd -y
+cd /var/www/html
+echo "<html><h1>Flights-Server-1</h1> </html>" > index.html
+service httpd start
+
+
+2) Create EC2 instance (Flights-Server2) with below user data
+
+#! /bin/bash
+sudo su
+yum install httpd -y
+cd /var/www/html
+echo "<html><h1>Flights-Server-2</h1> </html>" > index.html
+service httpd start
+
+
+3) Create Flights-TargetGroup and add above 2 EC2 instances to Flights-TargetGroup
+
+
+
+4) Create EC2 instance (Hotels-Server1) with below user data
+
+
+#! /bin/bash
+sudo su
+yum install httpd -y
+cd /var/www/html
+echo "<html><h1>Hotels-Server-1</h1> </html>" > index.html
+service httpd start
+
+
+5) Create EC2 instance (Hotels-Server2) with below user data
+
+
+#! /bin/bash
+sudo su
+yum install httpd -y
+cd /var/www/html
+echo "<html><h1>Hotels-Server-2</h1> </html>" > index.html
+service httpd start
+
+
+6) Create 'Hotels-TargetGroup' and above 2 servers to Hotels-TargetGroup
+
+
+
+7) Create Load Balancer with 'Flights-TargetGroup'
+
+8) Goto Load Balancer -> Listener -> View or Edit Rules -> Configure Routing Rules
+
+
+		 Query String => type  : hotels ===> Hotels_TargetGroup
+		 Query String => type  : flights ===> Flights_TargetGroup
+
+
+9) Access Load Balancer like below
+
+	URL-1 :  http://makemytrip-421218879.ap-south-1.elb.amazonaws.com?type=flights
+
+	URL-2 : http://makemytrip-421218879.ap-south-1.elb.amazonaws.com?type=hotels
+
+
+
+Conclusion
+--------------
+
+1) Delete LBR
+2) Delete TGs
+3) Delete EC2 instances
+
+
+
+
+
+
+
+
+
+
+

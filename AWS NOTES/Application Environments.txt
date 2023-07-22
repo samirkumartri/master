@@ -1,0 +1,69 @@
+=====================
+Application Environments
+=====================
+
+-> Environment means the platform which is used to run our application
+
+-> In Realtime, we will use multiple environments to run our application
+
+				-> DEV Environment
+		
+				-> SIT Environment
+
+				-> UAT Environment
+
+				-> Pilot Environment
+
+				-> Prod Environment
+
+-> Developers will use DEV environment for integration testing. 
+
+-> SIT env will be used by Software Testing team to test our application functionality. SIT stands for System Integration Testing.
+
+-> UAT means User Acceptance Testing. UAT will done by Client. For client testing we will give UAT environment.
+
+Note: After UAT testing, client will decide GO or No-GO. GO means go for production deployment. No-GO means production deployment cancelled.
+
+-> When client identify some critical bugs in UAT then they will say No GO.
+
+-> PILOT env is called as pre-prod environment. It is used for live data testing.
+
+-> Prod env is called live environment. The application which is deployed in PROD env will be available for public users access.
+
+
+Note: To deploy the project into these environments we will use Jenkins software.
+
+
+
+
+1) Maven : Build Tool
+
+2) Git Hub : Source Code Repository s/w
+
+3) Nexus : Artifactory Repository to upload artifacts & to create shared libraries
+
+4) SonarQube : Code Quality Checking / Code Review S/w
+
+5) Tomcat : Web Server to run our web applications
+
+6) Jenkins: CI CD software which is used to automate build & deployments
+
+Note: Created one pipeline using all above tools to perform build & deployment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
